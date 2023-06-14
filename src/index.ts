@@ -1,5 +1,5 @@
 import {ILogger, LogEntry, LoggerConfig, LoggerOptions} from "./types";
-import {getCurrentTime} from "./helpers";
+import {getCurrentTime} from "./utils";
 
 const chalk = require("chalk");
 import fs from "fs";
