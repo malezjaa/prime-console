@@ -21,7 +21,11 @@ or
 - 📄 Saving logs to files, both to .txt and .json
 - ⚙️ Custom log levels
 - 🔨 Highly customizable
-### Usage
+
+## CLI
+```npx prime generate``` - run this to easily generate Logger config
+ 
+## Usage
 
 #### Logging messages to the console
 
@@ -127,9 +131,10 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 1.1.0   | :white_check_mark: |
+| < 1.1.0  | :x:                |
 | 1.0.5   | :white_check_mark: |
-| 1.0.4   | :white_check_mark: |
-| < 1.0.4   | :x:                |
+| < 1.0.5 | :x:                |
 
 ## Reporting a Vulnerability
 
