@@ -114,7 +114,6 @@ export class Logger implements ILogger {
     private logMessage(message: string, type: string, level: number) {
         if (level <= this.logLevel) {
             const formattedMessage = this.formatMessage(message, type);
-            console.log(formattedMessage);
             if (this.logFile) {
                 if (this.logFileFormat === "json") {
                     const filePath = this.logFile.endsWith(".txt") ? this.logFile.replace(".txt", ".json") : `${this.logFile}.json`
