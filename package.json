@@ -8,16 +8,11 @@
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build",
     "dev": "ts-node-dev ./src/index.ts",
-    "cli": "ts-node-dev bin/cli.ts"
+    "cli": "ts-node-dev src/bin/cli.ts"
   },
   "bin": {
-    "prime": "bin/cli.ts"
+    "prime": "dist/bin/cli.js"
   },
-  "files": [
-    "bin",
-    "src",
-    "dist"
-  ],
   "keywords": [
     "logging",
     "logger",
