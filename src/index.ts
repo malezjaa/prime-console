@@ -100,8 +100,6 @@ export class Logger implements ILogger {
             throw new Error(`Custom log level '${type}' is already defined.`);
         } else if (level < 0 || level > 5) {
             throw new Error(`Log level must be between 0 and 5.`);
-        } else if (color && !chalk[color]) {
-            throw new Error(`Invalid color '${color}'.`);
         } else {
             this.customLevels[type] = level;
             if (color) {
