@@ -78,10 +78,19 @@ const main = async () => {
                         'Enter the path to the file where you want to save your logs:'
                 },
                 {
-                    type: 'number',
+                    type: 'input',
                     name: 'logLevel',
                     message:
-                        `What is the maximum log level you want to display?`
+                        `What is the maximum log level you want to display?`,
+                    validate: function (input) {
+                        if (isNaN(input)) {
+                            return 'The log level must be a number!';
+                        }
+                        if (input > 5) {
+                            return 'The log level cannot be higher than 5!';
+                        }
+                        return true
+                    }
                 },
                 {
                     type:
