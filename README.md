@@ -118,6 +118,23 @@ const logger = new Logger(options);
 - **logFile** - location to file where your messages will be saved. For default use `.txt` ("./file.txt") extension. If you want to use json instead set `logFileFormat` as `"json"` and remove extension from logFile ("./file"). If not provided, messages will only be logged to the console.
 - **logLevel** - The minimum level of messages to log. Only messages with a level greater than or equal to this value will be logged.
 
+# Security Policy
+
+## Supported Versions
+
+Use this section to tell people about which versions of your project are
+currently being supported with security updates.
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.0.5   | :white_check_mark: |
+| 1.0.4   | :white_check_mark: |
+| < 1.0.4   | :x:                |
+
+## Reporting a Vulnerability
+
+Please open new issue, to report any vulnerablility.
+
 ## Authors
 
 - [@malezjaa](https://www.github.com/malezjaa)
