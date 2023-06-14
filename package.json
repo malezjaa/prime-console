@@ -1,6 +1,6 @@
 {
   "name": "prime-console",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logging library for Node.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,7 +9,13 @@
     "prepare": "npm run build",
     "dev": "ts-node-dev ./src/index.ts"
   },
-  "keywords": ["logging", "logger", "console", "typescript", "nodejs"],
+  "keywords": [
+    "logging",
+    "logger",
+    "console",
+    "typescript",
+    "nodejs"
+  ],
   "author": "malezjaa",
   "license": "ISC",
   "dependencies": {
