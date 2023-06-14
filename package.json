@@ -1,6 +1,6 @@
 {
   "name": "prime-console",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Logging library for Node.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
