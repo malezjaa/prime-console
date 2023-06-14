@@ -131,7 +131,7 @@ export class Logger implements ILogger {
     }
   }
 
-  public clear(file?: boolean) {
+  clear(file?: boolean) {
     console.clear();
 
     const log = this.logMessage("File and console was cleared", "info", 1);

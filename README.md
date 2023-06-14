@@ -20,6 +20,8 @@ or
 
 #### Logging messages to the console
 
+**Important** if messages don't show in console, you will have to change log level in Logger instance.
+
 ```javascript
 import { Logger } from "./Logger";
 
