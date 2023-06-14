@@ -1,5 +1,5 @@
 {
-  "name": "console-king",
+  "name": "prime-console",
   "version": "1.0.0",
   "description": "Logging library for Node.js",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "prepare": "npm run build",
     "dev": "ts-node-dev ./src/index.ts"
   },
-  "keywords": [],
+  "keywords": ["logging", "logger", "console", "typescript", "nodejs"],
   "author": "malezjaa",
   "license": "ISC",
   "dependencies": {

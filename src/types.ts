@@ -19,4 +19,11 @@ export interface LoggerOptions {
   format?: string;
   logFile?: string | null;
   logLevel?: number;
+  logFileFormat?: "text" | "json";
+}
+
+export interface LogEntry {
+  timestamp: string;
+  type: string;
+  message: string;
 }
