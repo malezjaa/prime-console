@@ -150,17 +150,11 @@ export class Logger implements ILogger {
         ) {
             const color = this.config[type].color;
             if (chalk[color]) {
-                console.log(useColor,
-                    this.config[type],
-                    this.config[type].color, chalk[color](type.toUpperCase()))
                 return this.format
                     .replace("%t", chalk[color](type.toUpperCase()))
                     .replace("%d", chalk.bold.black(getCurrentTime()))
                     .replace("%m", message);
             } else if (color.startsWith("#")) {
-                console.log(useColor,
-                    this.config[type],
-                    this.config[type].color, chalk.hex(color)(type.toUpperCase()))
                 return this.format
                     .replace("%t", chalk.hex(color)(type.toUpperCase()))
                     .replace("%d", chalk.bold.black(getCurrentTime()))
