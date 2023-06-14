@@ -1,7 +1,9 @@
+#!/usr/bin/env node
+
 import { Command } from 'commander';
-import {LoggerOptions} from "../types";
+import {LoggerOptions} from "../src/types";
 import * as chalk from "chalk";
-import {Logger} from "../index";
+import {Logger} from "../src";
 
 const program = new Command("Prime Console");
 
