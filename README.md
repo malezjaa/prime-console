@@ -21,7 +21,11 @@ or
 - 📄 Saving logs to files, both to .txt and .json
 - ⚙️ Custom log levels
 - 🔨 Highly customizable
-### Usage
+
+## CLI
+```npx prime generate``` - run this to easily generate Logger config
+ 
+## Usage
 
 #### Logging messages to the console
 
