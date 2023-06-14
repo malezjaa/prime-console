@@ -3,15 +3,15 @@
   "version": "1.0.8",
   "description": "Logging library for Node.js",
   "main": "dist/index.js",
+  "bin": {
+    "prime": "dist/bin/cli.js"
+  },
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build",
     "dev": "ts-node-dev ./src/index.ts",
     "cli": "ts-node-dev src/bin/cli.ts"
-  },
-  "bin": {
-    "prime": "dist/bin/cli.js"
   },
   "keywords": [
     "logging",
