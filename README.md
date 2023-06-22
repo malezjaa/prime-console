@@ -52,21 +52,27 @@ const options: LoggerOptions = {
   config: {
     info: {
       color: "blue",
+      background: "black"
     },
     error: {
         color: "#e17607",
+      background: "none"
     },
     warning: {
       color: "yellow",
+      background: "none"
     },
     debug: {
       color: "magenta",
+      background: "#e17607"
     },
     verbose: {
       color: "cyan",
+      background: "none"
     },
     silly: {
       color: "green",
+      background: "none"
     },
   },
   format: "[%t] %d %m",
@@ -144,7 +150,7 @@ logger.clear() or logger.clear(true)
 
 | Version | Supported          |
 |---------| ------------------ |
-| <1.1.2  | :white_check_mark: |
+| <1.1.4  | :white_check_mark: |
 | < 1.1.0 | :x:                |
 | 1.0.5   | :white_check_mark: |
 | < 1.0.5 | :x:                |
