@@ -73,12 +73,6 @@ const main = async () => {
                 },
                 {
                     type: 'input',
-                    name: 'logFile',
-                    message:
-                        'Enter the path to the file where you want to save your logs:'
-                },
-                {
-                    type: 'input',
                     name: 'logLevel',
                     message:
                         `What is the maximum log level you want to display?`,
@@ -92,49 +86,101 @@ const main = async () => {
                         return true
                     }
                 },
+            ]);
+
+            const fileSetup  = await inquirer.prompt([
                 {
-                    type:
-                        `list`,
-                    name:
-                        `logFileFormat`,
-                    message:
-                        `In what format do you want to save your logs in the file?`,
-                    choices:
-                        [`text`, `json`]
+                    type: 'confirm',
+                    name: 'file',
+                    message: 'Do you want to edit the file setup?'
                 }
             ]);
+
+            let fileAnswers;
+            if (fileSetup.file){
+                fileAnswers = await inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'logDir',
+                        message: 'What directory do you want to save your logs in? You can use {cwd} that will be replaced with the current working directory.',
+                    },
+                    {
+                        type: 'input',
+                        name: 'fileName',
+                        message: 'What do you want to name your log file?',
+                    },
+                    {
+                        type: 'list',
+                        name: 'logFileFormat',
+                        message: 'What format do you want to save your logs in?',
+                        choices: ['text', 'json']
+                    }
+                ])
+            }
+
+            const timeSetup  = await inquirer.prompt([
+                {
+                    type: 'confirm',
+                    name: 'time',
+                    message: 'Do you want to edit the time setup?'
+                }
+            ]);
+
+            let timeAnswers;
+            if (timeSetup.time){
+                timeAnswers = await inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'timeColor',
+                        message: 'What color do you want to use for the time?',
+                    },
+                    {
+                        type: 'list',
+                        name: "bold",
+                        message: 'Do you want the text to be bold?',
+                        choices: ["true", "false"]
+                    }
+                ])
+            }
 
             const options : LoggerOptions = {
                 config :{
                     info:{
-                        color : answers?.infoColor,
+                        color : answers?.infoColor || "",
                         background: "none"
                     },
                     error:{
-                        color : answers?.errorColor,
+                        color : answers?.errorColor || "",
                         background: "none"
                     },
                     warning:{
-                        color : answers?.warningColor,
+                        color : answers?.warningColor || "",
                         background: "none"
                     },
                     debug:{
-                        color : answers?.debugColor,
+                        color : answers?.debugColor || "",
                         background: "none"
                     },
                     verbose:{
-                        color : answers?.verboseColor,
+                        color : answers?.verboseColor || "",
                         background: "none"
                     },
                     silly:{
-                        color : answers?.sillyColor,
+                        color : answers?.sillyColor || "",
                         background: "none"
                     }
                 },
-                format : otherAnswers.format,
-                logFile : otherAnswers.logFile,
-                logLevel : otherAnswers.logLevel,
-                logFileFormat : otherAnswers.logFileFormat
+                format : otherAnswers.format || "",
+                file: {
+                    dir: fileAnswers.logDir || "",
+                    name: fileAnswers.fileName || "",
+                    format: fileAnswers.logFileFormat || ""
+                },
+                logLevel : otherAnswers.logLevel || "",
+                time: {
+                    color: timeAnswers.timeColor || "",
+                    bold: timeAnswers.bold === "true"
+                }
             }
 
             console.log(options);
