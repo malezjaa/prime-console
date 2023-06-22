@@ -43,6 +43,64 @@ logger.silly('test silly message');
 ```
 - In this example, we create an instance of the Logger class with the log level set to 5, which means that all messages will be logged. Then, we call various methods of the Logger class to log messages of different types.
 
+## Logger options
+
+```js
+import {Logger} from 'prime-console';
+
+const options: LoggerOptions = {
+  config: {
+    info: {
+      color: "blue",
+    },
+    error: {
+        color: "#e17607",
+    },
+    warning: {
+      color: "yellow",
+    },
+    debug: {
+      color: "magenta",
+    },
+    verbose: {
+      color: "cyan",
+    },
+    silly: {
+      color: "green",
+    },
+  },
+  format: "[%t] %d %m",
+  logLevel: 5,
+  file: {
+    dir: "{cwd}/logs",
+    name: "logfile",
+    format: "text" | "json",
+  },
+  time: {
+    color: "blue",
+    bold: true,
+  }
+};
+
+const logger = new Logger(options);
+```
+
+- {cwd} - current working directory
+
+- **color** - can be hex or color's name
+- **format** - way of message being displayed
+  - **%t** - type
+  - **%d** - date/time
+  - **%m** - message
+- **logLevel** - The minimum level of messages to log. Only messages with a level greater than or equal to this value will be logged.
+- **file** - options for file logging
+  - **dir** - directory where log file will be saved
+  - **name** - name of log file
+  - **format** - format of log file (json or text)
+- **time** - options for time
+  - **color** - color of text
+  - **bold** - bold text
+  - 
 #### Logging messages to a file
 
 ```javascript
@@ -79,48 +137,6 @@ logger.clear() or logger.clear(true)
 ```
 
 - Clear function will clear the console. If true is provided as first argument, function will also clear the log file.
-## Logger options
-
-```js
-import {Logger} from 'prime-console';
-
-const options: LoggerOptions = {
-  config: {
-    info: {
-      color: "blue",
-    },
-    error: {
-        color: "#e17607",
-    },
-    warning: {
-      color: "yellow",
-    },
-    debug: {
-      color: "magenta",
-    },
-    verbose: {
-      color: "cyan",
-    },
-    silly: {
-      color: "green",
-    },
-  },
-  format: "[%t] %d %m",
-  logFile: "./log.txt",
-  logLevel: 5,
-  logFileFormat: "json",
-};
-
-const logger = new Logger(options);
-```
-
-- **color** - can be hex or color's name
-- **format** - way of message being displayed
-  - %t - type
-  - %d - date/time
-  - %m - message
-- **logFile** - location to file where your messages will be saved. For default use `.txt` ("./file.txt") extension. If you want to use json instead set `logFileFormat` as `"json"` and remove extension from logFile ("./file"). If not provided, messages will only be logged to the console.
-- **logLevel** - The minimum level of messages to log. Only messages with a level greater than or equal to this value will be logged.
 
 # Security Policy
 
@@ -130,15 +146,15 @@ Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 1.1.0   | :white_check_mark: |
-| < 1.1.0  | :x:                |
+|---------| ------------------ |
+| <1.1.2  | :white_check_mark: |
+| < 1.1.0 | :x:                |
 | 1.0.5   | :white_check_mark: |
 | < 1.0.5 | :x:                |
 
 ## Reporting a Vulnerability
 
-Please open new issue, to report any vulnerablility.
+Please open new issue, to report any vulnerability.
 
 ## Authors
 

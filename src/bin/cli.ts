@@ -108,21 +108,27 @@ const main = async () => {
                 config :{
                     info:{
                         color : answers?.infoColor,
+                        background: "none"
                     },
                     error:{
                         color : answers?.errorColor,
+                        background: "none"
                     },
                     warning:{
                         color : answers?.warningColor,
+                        background: "none"
                     },
                     debug:{
                         color : answers?.debugColor,
+                        background: "none"
                     },
                     verbose:{
                         color : answers?.verboseColor,
+                        background: "none"
                     },
                     silly:{
                         color : answers?.sillyColor,
+                        background: "none"
                     }
                 },
                 format : otherAnswers.format,

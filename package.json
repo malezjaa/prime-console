@@ -11,7 +11,8 @@
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build",
     "dev": "ts-node-dev ./src/index.ts",
-    "cli": "ts-node-dev src/bin/cli.ts"
+    "cli": "ts-node-dev src/bin/cli.ts",
+    "pkg": "ts-node-dev src/test.ts"
   },
   "keywords": [
     "logging",

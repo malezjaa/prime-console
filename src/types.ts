@@ -11,19 +11,27 @@ export interface ILogger {
 export interface LoggerConfig {
   [key: string]: {
     color: string;
+    background: string;
   };
 }
 
 export interface LoggerOptions {
   config?: LoggerConfig;
   format?: string;
-  logFile?: string | null;
   logLevel?: number;
-  logFileFormat?: "text" | "json";
+  file?: {
+    dir: string;
+    name: string;
+    format: "text" | "json";
+  }
+  time?: {
+    color?: string;
+    bold?: boolean;
+  }
 }
 
 export interface LogEntry {
-  timestamp: string;
+  timestamp: number;
   type: string;
   message: string;
 }
