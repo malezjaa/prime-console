@@ -6,3 +6,4 @@ package-lock.json
 .idea
 log.json
 src/test.ts
+pnpm-lock.yaml
