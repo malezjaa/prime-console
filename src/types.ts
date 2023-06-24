@@ -5,6 +5,7 @@ export interface ILogger {
   debug: (message: string) => void;
   verbose: (message: string) => void;
   silly: (message: string) => void;
+  custom: (message: string, type: string) => void;
   clear: () => void;
 }
 
@@ -23,15 +24,22 @@ export interface LoggerOptions {
     dir: string;
     name: string;
     format: "text" | "json";
-  }
+  };
   time?: {
     color?: string;
     bold?: boolean;
-  }
+  };
 }
 
 export interface LogEntry {
   timestamp: number;
   type: string;
   message: string;
+}
+
+export interface ParsedStackFrame {
+  functionName: string;
+  fileName: string;
+  lineNumber: number;
+  columnNumber: number;
 }
