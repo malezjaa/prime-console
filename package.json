@@ -8,7 +8,7 @@
   },
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
+    "build": "tsup ./src/index.ts --format cjs,esm --dts",
     "dev": "ts-node-dev ./src/index.ts",
     "cli": "ts-node-dev src/bin/cli.ts",
     "pkg": "ts-node-dev src/test.ts",
