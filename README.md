@@ -1,10 +1,10 @@
 # Prime Console
 
-Logging library for Node.js. Supports custom colors, background and formats.
+Logging library for Node.js. Supports custom colors, background and formats
 
 ## Installation
 
-Install my-project with npm or yarn
+Install my project with npm or yarn
 
 ```bash
   npm install prime-console
