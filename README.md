@@ -112,7 +112,12 @@ const logger = new Logger(options);
 ```javascript
 import {Logger} from 'prime-console';
 
-const logger = new Logger({logLevel: 5, logFile: 'log.txt'});
+const logger = new Logger({logLevel: 5,   
+  file: {
+    dir: "{cwd}/logs",
+    name: "logfile",
+    format: "text" | "json",
+  }});
 
 logger.info('test file log message');
 ```
