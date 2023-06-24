@@ -1,7 +1,6 @@
-
 # Prime Console
 
-Logging library for Node.js
+Logging library for Node.js. Supports custom colors, background and formats.
 
 ## Installation
 
@@ -10,7 +9,9 @@ Install my-project with npm or yarn
 ```bash
   npm install prime-console
 ```
+
 or
+
 ```bash
   yarn add prime-console
 ```
@@ -23,56 +24,58 @@ or
 - 🔨 Highly customizable
 
 ## CLI
-```npx prime generate``` - run this to easily generate Logger config
- 
+
+`npx prime generate` - run this to easily generate Logger config
+
 ## Usage
 
 #### Logging messages to the console
 
 ```javascript
-import {Logger} from 'prime-console';
+import { Logger } from "prime-console";
 
-const logger = new Logger({logLevel: 5});
+const logger = new Logger({ logLevel: 5 });
 
-logger.debug('test debug message');
-logger.info('test info message');
-logger.warning('test warning message');
-logger.error('test error message');
-logger.verbose('test verbose message');
-logger.silly('test silly message');
+logger.debug("test debug message");
+logger.info("test info message");
+logger.warning("test warning message");
+logger.error("test error message");
+logger.verbose("test verbose message");
+logger.silly("test silly message");
 ```
+
 - In this example, we create an instance of the Logger class with the log level set to 5, which means that all messages will be logged. Then, we call various methods of the Logger class to log messages of different types.
 
 ## Logger options
 
 ```js
-import {Logger} from 'prime-console';
+import { Logger } from "prime-console";
 
 const options: LoggerOptions = {
   config: {
     info: {
       color: "blue",
-      background: "black"
+      background: "black",
     },
     error: {
-        color: "#e17607",
-      background: "none"
+      color: "#e17607",
+      background: "none",
     },
     warning: {
       color: "yellow",
-      background: "none"
+      background: "none",
     },
     debug: {
       color: "magenta",
-      background: "#e17607"
+      background: "#e17607",
     },
     verbose: {
       color: "cyan",
-      background: "none"
+      background: "none",
     },
     silly: {
       color: "green",
-      background: "none"
+      background: "none",
     },
   },
   format: "[%t] %d %m",
@@ -85,7 +88,7 @@ const options: LoggerOptions = {
   time: {
     color: "blue",
     bold: true,
-  }
+  },
 };
 
 const logger = new Logger(options);
@@ -106,20 +109,23 @@ const logger = new Logger(options);
 - **time** - options for time
   - **color** - color of text
   - **bold** - bold text
-  - 
+  -
+
 #### Logging messages to a file
 
 ```javascript
-import {Logger} from 'prime-console';
+import { Logger } from "prime-console";
 
-const logger = new Logger({logLevel: 5,   
+const logger = new Logger({
+  logLevel: 5,
   file: {
     dir: "{cwd}/logs",
     name: "logfile",
     format: "text" | "json",
-  }});
+  },
+});
 
-logger.info('test file log message');
+logger.info("test file log message");
 ```
 
 - In this example, we create an instance of the Logger class with the log level set to 5 and the log file set to log.txt. Then, we call the info method to log a message of type info to the console and the specified log file.
@@ -131,11 +137,11 @@ import {Logger} from 'prime-console';
 
 const logger = new Logger({logLevel: 5});
 
-logger.addCustomLevel('custom', 3, 'blue');
+logger.addCustomLevel('custom', 3, 'blue', "black);
 logger.custom('test custom message', 'custom');
 ```
 
-- In this example, we create an instance of the Logger class with the log level set to 5. Then, we call the addCustomLevel method to add a custom log level named custom with a level of 3 and a color of blue. Finally, we call the custom method to log a message of type custom.
+- In this example, we create an instance of the Logger class with the log level set to 5. Then, we call the addCustomLevel method to add a custom log level named custom with a level of 3, a color of blue and black background. Finally, we call the custom method to log a message of type custom.
 
 #### Clear function
 
@@ -154,8 +160,8 @@ logger.clear() or logger.clear(true)
 ## Supported Versions
 
 | Version | Supported          |
-|---------| ------------------ |
-| <1.1.4  | :white_check_mark: |
+| ------- | ------------------ |
+| <1.1.5  | :white_check_mark: |
 | < 1.1.0 | :x:                |
 | 1.0.5   | :white_check_mark: |
 | < 1.0.5 | :x:                |
@@ -167,4 +173,3 @@ Please open new issue, to report any vulnerability.
 ## Authors
 
 - [@malezjaa](https://www.github.com/malezjaa)
-
