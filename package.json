@@ -1,6 +1,6 @@
 {
   "name": "prime-console",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Logging library for Node.js. Supports custom colors, background and formats.",
   "main": "dist/index.js",
   "bin": {
