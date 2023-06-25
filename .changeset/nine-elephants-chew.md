@@ -1,0 +1,5 @@
+---
+"prime-console": patch
+---
+
+Fix
