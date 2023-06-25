@@ -137,7 +137,7 @@ import {Logger} from 'prime-console';
 
 const logger = new Logger({logLevel: 5});
 
-logger.addCustomLevel('custom', 3, 'blue', "black);
+logger.addCustomLevel('custom', 3, 'blue', "black");
 logger.custom('test custom message', 'custom');
 ```
 
@@ -161,8 +161,8 @@ logger.clear() or logger.clear(true)
 
 | Version | Supported          |
 | ------- | ------------------ |
-| <1.1.5  | :white_check_mark: |
-| < 1.1.0 | :x:                |
+| 1.1.7  | :white_check_mark: |
+| < 1.1.7 | :x:                |
 | 1.0.5   | :white_check_mark: |
 | < 1.0.5 | :x:                |
 
