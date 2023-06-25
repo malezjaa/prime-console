@@ -29,6 +29,7 @@ export interface LoggerOptions {
     color?: string;
     bold?: boolean;
   };
+  icon?: boolean;
 }
 
 export interface LogEntry {

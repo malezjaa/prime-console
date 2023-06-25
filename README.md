@@ -89,6 +89,7 @@ const options: LoggerOptions = {
     color: "blue",
     bold: true,
   },
+  icon: true,
 };
 
 const logger = new Logger(options);
@@ -109,7 +110,7 @@ const logger = new Logger(options);
 - **time** - options for time
   - **color** - color of text
   - **bold** - bold text
-  -
+- **icon** - will display icons instead of types
 
 #### Logging messages to a file
 
@@ -161,7 +162,7 @@ logger.clear() or logger.clear(true)
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.1.7  | :white_check_mark: |
+| <1.1.8  | :white_check_mark: |
 | < 1.1.7 | :x:                |
 | 1.0.5   | :white_check_mark: |
 | < 1.0.5 | :x:                |

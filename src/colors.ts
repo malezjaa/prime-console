@@ -1,10 +1,14 @@
+import { icons } from "./utils";
+
 const chalk = require("chalk");
 
 export function applyColor(
   text: string,
   color: string | undefined,
   backgroundColor: string | undefined,
-  bold: boolean | undefined
+  bold: boolean | undefined,
+  type: string,
+  icon: boolean | undefined
 ): string {
   let coloredText = text;
   if (color) {
@@ -17,7 +21,7 @@ export function applyColor(
   if (bold) {
     coloredText = chalk.bold(coloredText);
   }
-  if (backgroundColor && backgroundColor !== "none") {
+  if (backgroundColor && backgroundColor !== "none" && !icon) {
     if (chalk[backgroundColor]) {
       coloredText = chalk[
         `bg${backgroundColor[0].toUpperCase()}${backgroundColor.slice(1)}`
@@ -25,6 +29,12 @@ export function applyColor(
     } else if (backgroundColor.startsWith("#")) {
       coloredText = chalk.bgHex(backgroundColor)(` ${coloredText} `);
     }
+  }
+  if (icon) {
+    coloredText = chalk.bold(
+      //@ts-ignore
+      `${icons[type]} `
+    );
   }
   return coloredText;
 }

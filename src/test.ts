@@ -17,4 +17,12 @@ const log = new Logger({
     color: "blue",
   },
   format: "%t %m",
+  icon: false,
 });
+
+log.info("Hello world!");
+log.error("Hello world!");
+log.warning("Hello world!");
+log.debug("Hello world!");
+log.verbose("Hello world!");
+log.silly("Hello world!");

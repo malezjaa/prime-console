@@ -16,6 +16,7 @@ export class Logger implements ILogger {
   private logEntries: LogEntry[];
   private file?: LoggerOptions["file"];
   private time?: LoggerOptions["time"];
+  private icon?: boolean;
 
   constructor(options: LoggerOptions = {}) {
     const defaultConfig: LoggerConfig = defaultColors;
@@ -35,6 +36,7 @@ export class Logger implements ILogger {
       bold: options.time?.bold || false,
     };
 
+    this.icon = options.icon === undefined ? false : options.icon;
     this.config = config;
     this.format = format;
     this.logLevel = logLevel;
@@ -108,13 +110,17 @@ export class Logger implements ILogger {
         type.toUpperCase(),
         color,
         backgroundColor,
-        true
+        true,
+        type,
+        this.icon
       );
       let coloredTime = applyColor(
         getCurrentTime(),
         timeColors?.color,
         undefined,
-        undefined
+        undefined,
+        type,
+        this.icon
       );
       if (timeColors?.bold) {
         coloredTime = chalk.bold(coloredTime);
