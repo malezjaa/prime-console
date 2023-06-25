@@ -1,21 +1,29 @@
-name: CI
 on:
   push:
     branches:
-      - "**"
+      - "master"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: "pnpm"
+          node-version: 16
+      - run: pnpm run build
 
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+          cache: "pnpm"
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm run lint && pnpm run build
+      - run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

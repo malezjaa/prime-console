@@ -12,8 +12,8 @@
     "dev": "ts-node-dev ./src/index.ts",
     "cli": "ts-node-dev src/bin/cli.ts",
     "pkg": "ts-node-dev src/test.ts",
-    "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
+    "lint": "tsc",
+    "release": "pnpm run lint && pnpm run build"
   },
   "keywords": [
     "logging",
