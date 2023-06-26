@@ -7,7 +7,7 @@ export function applyColor(
   color: string | undefined,
   backgroundColor: string | undefined,
   bold: boolean | undefined,
-  type: string,
+  type: string | undefined,
   icon: boolean | undefined
 ): string {
   let coloredText = text;
@@ -29,12 +29,12 @@ export function applyColor(
     } else if (backgroundColor.startsWith("#")) {
       coloredText = chalk.bgHex(backgroundColor)(` ${coloredText} `);
     }
-  }
-  if (icon) {
+  } else if (icon && type) {
     coloredText = chalk.bold(
       //@ts-ignore
       `${icons[type]} `
     );
   }
+
   return coloredText;
 }

@@ -8,11 +8,6 @@ const log = new Logger({
       background: "red",
     },
   },
-  file: {
-    dir: "{cwd}/siema/logs",
-    name: "log",
-    format: "json",
-  },
   time: {
     color: "blue",
   },

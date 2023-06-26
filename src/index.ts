@@ -119,7 +119,7 @@ export class Logger implements ILogger {
         timeColors?.color,
         undefined,
         undefined,
-        type,
+        undefined,
         this.icon
       );
       if (timeColors?.bold) {
