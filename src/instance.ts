@@ -9,8 +9,9 @@ import {
 import defu from "defu";
 import path from "path";
 import fs from "node:fs";
-import { icons, join, logColors, strWidth } from "./utils";
-import { black, createColors, gray } from "colorette";
+import { icons, join, logColors, strWidth, createColors } from "./utils";
+
+const { black, gray } = createColors(true);
 
 export class ConsoleInstance {
   options: LoggerConfig = {};

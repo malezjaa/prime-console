@@ -1,4 +1,4 @@
-import { Color, Colorette } from "colorette";
+import { ColorFunction } from "./utils";
 
 export type LoggerConfig = Partial<{
   level: number;
@@ -34,8 +34,8 @@ export type ReporterObject = {
   timestamp: Date;
   icon: string;
   color: {
-    text: Color;
-    bg: Color;
+    text: ColorFunction;
+    bg: ColorFunction;
   };
 };
 
