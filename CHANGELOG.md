@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.0.4
+
+[compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.3...v2.0.4)
+
+### 🩹 Fixes
+
+- Reduce bunlde size ([9e2bcf6](https://github.com/malezjaa/prime-console/commit/9e2bcf6))
+
+### ❤️ Contributors
+
+- Krzysztof
+
 ## v2.0.3
 
 [compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.2...v2.0.3)
