@@ -1,0 +1,50 @@
+{
+  "name": "prime-console",
+  "version": "1.1.9",
+  "description": "Easy to use logger for your node.js application",
+  "scripts": {
+    "prepare": "husky install dev/.husky",
+    "build": "tsup",
+    "dev": "pnpm build && node dist/index.js"
+  },
+  "repository": "malezjaa/prime-console",
+  "type": "module",
+  "exports": {
+    ".": {
+      "node": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "logger",
+    "colors"
+  ],
+  "author": "malezjaa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-angular": "^17.7.0",
+    "colorette": "^2.0.20",
+    "defu": "^6.1.2",
+    "is-unicode-supported": "^1.3.0",
+    "std-env": "^3.4.3",
+    "string-width": "^6.1.0",
+    "strip-ansi": "^7.1.0",
+    "tsup": "^7.2.0"
+  }
+}

@@ -1,0 +1,11 @@
+newIssueWelcomeComment: >
+  Thanks for opening your first issue! Be sure to follow the issue template and provide every bit of information to help the developers!
+
+newPRWelcomeComment: >
+  Thanks for opening this pull request! Please check out our contributing guidelines and make sure to follow the pull request template.
+
+firstPRMergeComment: >
+  Congrats on merging your first pull request! Keep making great things with us, thanks!!
+
+todo:
+  keyword: "@todo"
