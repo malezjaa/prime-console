@@ -5,7 +5,8 @@
   "scripts": {
     "prepare": "husky install dev/.husky",
     "build": "tsup",
-    "dev": "pnpm build && node dist/index.js"
+    "dev": "pnpm build && node dist/index.js",
+    "release": "pnpm build && changelogen --release --push && npm publish"
   },
   "repository": "malezjaa/prime-console",
   "type": "module",
@@ -32,6 +33,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.8.3",
+    "changelogen": "^0.5.5",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "prettier": "^3.0.3"
