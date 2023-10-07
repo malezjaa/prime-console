@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.0.5
+
+[compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.4...v2.0.5)
+
+### 🏡 Chore
+
+- Remove unwanted files from npm ([50de037](https://github.com/malezjaa/prime-console/commit/50de037))
+
+### ❤️ Contributors
+
+- Krzysztof
+
 ## v2.0.4
 
 [compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.3...v2.0.4)
