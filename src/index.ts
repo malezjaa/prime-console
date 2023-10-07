@@ -6,7 +6,3 @@ export const createLogger = (options: LoggerConfig = {}) => {
 };
 
 export const logger = createLogger();
-
-import { createColors } from "./utils";
-
-export const colors = createColors(true);

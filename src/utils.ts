@@ -158,7 +158,6 @@ const colorDefs = {
   bgWhiteBright: init(107, 49),
 };
 
-export type ColorName = keyof typeof colorDefs;
 export type ColorFunction = (text: string | number) => string;
 
 export function createColors(useColor = isColorSupported) {

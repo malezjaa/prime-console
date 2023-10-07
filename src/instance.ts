@@ -11,7 +11,7 @@ import path from "path";
 import fs from "node:fs";
 import { icons, join, logColors, strWidth, createColors } from "./utils";
 
-const { black, gray } = createColors(true);
+const colors = createColors(true);
 
 export class ConsoleInstance {
   options: LoggerConfig = {};
@@ -30,13 +30,15 @@ export class ConsoleInstance {
         const columns = process.stdout.columns || 80;
 
         line = isBadge
-          ? level.color.bg(black(" " + level.type.toUpperCase() + " "))
+          ? level.color.bg(colors.black(" " + level.type.toUpperCase() + " "))
           : level.color.text(level.icon);
 
         const left = `${line} ${level.message}`;
 
         const right = join(
-          level.timestamp ? gray(level.timestamp.toLocaleTimeString()) : null,
+          level.timestamp
+            ? colors.gray(level.timestamp.toLocaleTimeString())
+            : null,
         );
 
         const space = columns - strWidth(left) - strWidth(right) - 2;
@@ -44,7 +46,7 @@ export class ConsoleInstance {
         line =
           space > 0 && (columns || 0) >= 80
             ? left + " ".repeat(space) + right
-            : (right ? `${gray(`[${right}]`)} ` : "") + left;
+            : (right ? `${colors.gray(`[${right}]`)} ` : "") + left;
         console.log(line);
       },
       reporter: {},
@@ -97,13 +99,11 @@ export class ConsoleInstance {
     if (this.options.files) {
       this.updateFile(level);
     }
-    const keys = Object.keys(this.options.reporter);
 
-    const reporter = keys.includes(type)
+    const reporter = Object.keys(this.options.reporter).includes(type)
       ? this.options.reporter[type]
       : this.options.reporterOverride;
 
-    const colors = createColors();
     reporter(
       {
         message,
