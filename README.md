@@ -3,7 +3,7 @@
 
 [![npm version](https://img.shields.io/npm/v/prime-console?style=flat&logoColor=009933&color=ccff66)](https://www.npmjs.com/package/prime-console)
 [![downloads](https://img.shields.io/npm/dt/prime-console?style=flat&logoColor=009933&color=ccff66)](https://www.npmjs.com/package/prime-console)
-[![Bundle Size](https://img.shields.io/bundlephobia/min/prime-console?style=flat&logoColor=009933&color=ccff66)](https://bundlephobia.com/package/prime-console)
+[![Bundle Size](https://img.shields.io/bundlephobia/min/prime-console?style=flat&logoColor=009933&color=ccff66)](https://bundlephobia.com/package/prime-console@2.0.5)
 
 ## Contents
 * [Installation](#installation)
