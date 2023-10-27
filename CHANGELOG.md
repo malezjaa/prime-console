@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.1.0
+
+[compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.5...v2.1.0)
+
+### 🚀 Enhancements
+
+- Additional exports ([e223431](https://github.com/malezjaa/prime-console/commit/e223431))
+
+### ❤️ Contributors
+
+- Krzysztof
+
 ## v2.0.5
 
 [compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.4...v2.0.5)
