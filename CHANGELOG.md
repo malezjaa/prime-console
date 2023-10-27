@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.2.0
+
+[compare changes](https://github.com/malezjaa/prime-console/compare/v2.1.1...v2.2.0)
+
+### 🚀 Enhancements
+
+- Add colors to export ([08655ec](https://github.com/malezjaa/prime-console/commit/08655ec))
+
+### ❤️ Contributors
+
+- Krzysztof
+
 ## v2.1.1
 
 [compare changes](https://github.com/malezjaa/prime-console/compare/v2.1.0...v2.1.1)
