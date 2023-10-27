@@ -1,6 +1,6 @@
 {
   "name": "prime-console",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Easy to use logger for your node.js application",
   "scripts": {
     "prepare": "husky install dev/.husky",

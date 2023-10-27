@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.1
+
+[compare changes](https://github.com/malezjaa/prime-console/compare/v2.1.0...v2.1.1)
+
 ## v2.1.0
 
 [compare changes](https://github.com/malezjaa/prime-console/compare/v2.0.5...v2.1.0)
