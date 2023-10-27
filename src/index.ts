@@ -6,3 +6,6 @@ export const createLogger = (options: LoggerConfig = {}) => {
 };
 
 export const logger = createLogger();
+
+export * from "./types";
+export { logColors, icons, strWidth, join } from "./utils";
