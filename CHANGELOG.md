@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.2.1
+
+[compare changes](https://github.com/malezjaa/prime-console/compare/v2.2.0...v2.2.1)
+
+### 🩹 Fixes
+
+- Make methods public ([afd89c1](https://github.com/malezjaa/prime-console/commit/afd89c1))
+
+### ❤️ Contributors
+
+- Malezjaa
+
 ## v2.2.0
 
 [compare changes](https://github.com/malezjaa/prime-console/compare/v2.1.1...v2.2.0)
