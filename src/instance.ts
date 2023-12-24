@@ -15,7 +15,7 @@ const colors = createColors(true);
 
 export class ConsoleInstance {
   options: LoggerConfig = {};
-  private logEntries: LogEntry[] = [];
+  logEntries: LogEntry[] = [];
 
   constructor(options: LoggerConfig) {
     this.options = defu(options, <LoggerConfig>{
@@ -53,7 +53,7 @@ export class ConsoleInstance {
     });
   }
 
-  private updateFile(level: Pick<ReporterObject, "message" | "type">) {
+  updateFile(level: Pick<ReporterObject, "message" | "type">) {
     const fullPath = path.join(
       this.options.files?.path.replace("{cwd}", process.cwd()),
       this.options.files?.fileName +
@@ -85,7 +85,7 @@ export class ConsoleInstance {
     }
   }
 
-  private createFileIfNeeded(fullPath: string) {
+  createFileIfNeeded(fullPath: string) {
     const dirPath = path.dirname(fullPath);
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath, { recursive: true });
@@ -93,7 +93,7 @@ export class ConsoleInstance {
     if (!fs.existsSync(fullPath)) fs.writeFileSync(fullPath, "");
   }
 
-  private logMessage(level: Pick<ReporterObject, "message" | "type">) {
+  logMessage(level: Pick<ReporterObject, "message" | "type">) {
     const { message, type } = level;
 
     if (this.options.files) {
